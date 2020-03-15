@@ -1,0 +1,10 @@
+hours = input("Enter Hours:")
+h = float(hours)
+Pay = input("Enter Pay Rate:")
+P = float(Pay)
+
+if (h <= 40):
+    print(h*P)
+else:
+    x = h-40
+    print((1.5*x*P) +(40*P))
