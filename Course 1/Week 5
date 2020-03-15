@@ -2,10 +2,15 @@ hours = input("Enter Hours:")
 h = float(hours)
 Pay = input("Enter Pay Rate:")
 P = float(Pay)
+try:
+    h = float(hours)
+    P = float(Pay)
+except:
+    print("Error, please Enter numeric input")
 
 if (h <= 40):
-    print(h*P)
+    print(h * P)
 else:
-    #X is the Number of Hours Above 40
-    x = h-40
-    print((1.5*x*P) +(40*P))
+    # x is the Number of Hours Above 40
+    x = h - 40
+    print((1.5 * x * P) + (40 * P))
