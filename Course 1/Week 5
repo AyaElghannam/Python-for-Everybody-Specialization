@@ -6,5 +6,6 @@ P = float(Pay)
 if (h <= 40):
     print(h*P)
 else:
+    #X is the Number of Hours Above 40
     x = h-40
     print((1.5*x*P) +(40*P))
