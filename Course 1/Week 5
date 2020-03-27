@@ -1,5 +1,5 @@
 #ASSIGNMENT 3.1
-
+##On Using Functions as float and int
 hours = input("Enter Hours:")
 h = float(hours)
 Pay = input("Enter Pay Rate:")
@@ -21,7 +21,7 @@ else:
   
   
 #ASSIGNMENT 3.3
-
+##On Looping Using elif
 Score = input("Enter Score: ")
 S = float(Score)
 try:
