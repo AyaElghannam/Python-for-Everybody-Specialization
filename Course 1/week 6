@@ -1,3 +1,5 @@
+##On Using Functions
+##On Using Try Except
 def computepay(h, r):
 
     if (h <= 40):
