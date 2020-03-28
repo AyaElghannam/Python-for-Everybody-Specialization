@@ -1,0 +1,18 @@
+#Assignment 8.4
+fname = input("Enter file name: ")
+
+try:
+	fh = open(fname)
+except:
+    print('Error, could not open: ',fname)
+    quit()
+    
+lst = list()
+for line in fh:
+    line = fh.read()
+    line = line.split()
+    for w in line:
+    	if w not in lst:
+        	lst.append(w)
+lst.sort()
+print(lst)
