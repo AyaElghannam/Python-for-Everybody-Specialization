@@ -1,1 +1,34 @@
 
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import ssl
+
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = input('Enter - ')
+html = urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, "html.parser")
+
+sumnum = list()
+tagNum = 0
+# Retrieve all of the anchor tags
+tags = soup('span')
+for tag in tags:
+    # Look at the parts of a tag
+    
+    #Not Required
+    #print('TAG:', tag)
+    #print('URL:', tag.get('href', None))
+    #print('Contents:', tag.contents[0])
+    #print('Attrs:', tag.attrs)
+
+    #Required
+    x = tag.contents[0]
+    sumnum.append(int(x))
+    tagNum = tagNum + 1
+    
+print('Count', tagNum)
+print('Sum', sum(sumnum))
