@@ -52,13 +52,13 @@ position = int(input('Enter Position: '))
 
 while(count>0):
     tags = soup('a')
-    links=[]    
+    links=[]
+    
     for tag in tags:
         links.append(tag.get('href')) 
 
     retrieve_link = links[position - 1]
     print('Retrieve link:', retrieve_link)
-    
     html = urllib.request.urlopen(retrieve_link, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
     count = count-1
